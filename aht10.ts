@@ -123,7 +123,7 @@ namespace AHT10 {
     }
 
     
-//% blockId=aht10_humidity block="AHT10 Luftfeuchtigkeit (%%) an Adresse %address"
+//% blockId=aht10_humidity block="AHT10 Luftfeuchtigkeit (%) an Adresse %address"
 //% address.defl=0x38 address.min=0 address.max=127
 //% weight=90
 
