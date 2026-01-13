@@ -122,8 +122,8 @@ namespace AHT10 {
         return b[0]
     }
 
-    // *** FIXED: (%%) für literales Prozent + neue blockId ***
-    //% blockId=aht10_humidity_v2 block="AHT10 Luftfeuchtigkeit (%%) an Adresse %address"
+    // *** FIX: kein "%" im Text, eindeutige blockId ***
+    //% blockId=aht10_humidity_pct block="AHT10 Luftfeuchtigkeit in Prozent an Adresse %address"
     //% address.defl=0x38 address.min=0 address.max=127
     //% weight=90
     export function humidity(address: number = DEFAULT_ADDR): number {
@@ -287,4 +287,3 @@ namespace AHT10 {
         const tempC = (rawTemp * 200) / 1048576 - 50
         serial.writeLine("rawHum=" + rawHum + " rawTemp=" + rawTemp + " -> H=" + hum + "% T=" + tempC + "C")
     }
-}
