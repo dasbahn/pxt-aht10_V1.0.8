@@ -1,7 +1,15 @@
 
-# AHT10 Erweiterung für micro:bit (MakeCode)
+# AHT10 Erweiterung für MakeCode (micro:bit / Calliope mini)
 
-Eine einfache MakeCode-Erweiterung für den AHT10 (Temperatur & Luftfeuchtigkeit) über I²C.
+MakeCode‑Erweiterung für den **AHT10** Temperatur‑ und Luftfeuchtigkeitssensor über **I²C** (Standardadresse `0x38` / dezimal `56`).  
+Unterstützt Messung von **Temperatur (°C/°F)** und **relativer Luftfeuchte (%)** sowie abgeleitete Größen **Taupunkt (°C)** und **Heat Index (°C)**.
+
+---
+
+## Installation
+
+**Variante A – Release‑Tag (empfohlen)**  
+MakeCode → **Erweiterungen** → **Erweiterung hinzufügen** → **GitHub‑URL**:
 
 ## Verdrahtung
 - AHT10 VCC → 3.3V (kein 5V!)
@@ -9,19 +17,6 @@ Eine einfache MakeCode-Erweiterung für den AHT10 (Temperatur & Luftfeuchtigkeit
 - AHT10 SDA → P20 (SDA)
 - AHT10 SCL → P19 (SCL)
 - Standardadresse: 0x38
-
-## Blöcke
-- **AHT10 initialisieren an Adresse …**
-- **AHT10 Luftfeuchtigkeit (%) an Adresse …**
-- **AHT10 Temperatur (°C) an Adresse …**
-- **AHT10 Temperatur (°F) an Adresse …**
-- **AHT10 Soft-Reset an Adresse …** (optional bei Problemen)
-
-## Beispiel (Blöcke)
-- Im `Beim Start`-Block: `AHT10 initialisieren (0x38)`
-- Im `Dauerhaft`-Block:
-  - `zeige Zahl (AHT10 Temperatur (°C))`
-  - `zeige Zahl (AHT10 Luftfeuchtigkeit (%))`
 
 ## Beispiel (JavaScript)
 ```ts
