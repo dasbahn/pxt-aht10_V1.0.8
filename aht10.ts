@@ -122,7 +122,8 @@ namespace AHT10 {
         return b[0]
     }
 
-    //% blockId=aht10_humidity block="AHT10 Luftfeuchtigkeit (%) an Adresse %address"
+    // *** FIXED: (%%) für literales Prozent + neue blockId ***
+    //% blockId=aht10_humidity_v2 block="AHT10 Luftfeuchtigkeit (%%) an Adresse %address"
     //% address.defl=0x38 address.min=0 address.max=127
     //% weight=90
     export function humidity(address: number = DEFAULT_ADDR): number {
@@ -243,8 +244,7 @@ namespace AHT10 {
         return { humidity: hum, temperatureC: tempC }
     }
 
-    // ----------- Optionale Debug-Helfer (sichtbar, falls du willst) -----------
-    // I²C-Scan: listet antwortende Adressen im Serial-Monitor
+    // ----------- Optionale Debug-Helfer -----------
     //% blockId=aht10_scan_i2c block="AHT10 I²C-Scan (0..127) und Adressen seriell ausgeben"
     //% weight=10
     export function scanI2C(): void {
@@ -262,7 +262,6 @@ namespace AHT10 {
         }
     }
 
-    // Rohbytes dumpen (Serial) zum Debuggen von Timing/Busy/CRC
     //% blockId=aht10_dump_raw block="AHT10 Rohbytes dumpen an Adresse %address"
     //% address.defl=0x38 address.min=0 address.max=127
     //% weight=9
