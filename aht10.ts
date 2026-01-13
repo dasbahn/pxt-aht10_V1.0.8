@@ -122,9 +122,11 @@ namespace AHT10 {
         return b[0]
     }
 
-    //% blockId=aht10_humidity block="AHT10 Luftfeuchtigkeit (%%) an Adresse %address"
-    //% address.defl=0x38 address.min=0 address.max=127
-    //% weight=90
+    
+//% blockId=aht10_humidity block="AHT10 Luftfeuchtigkeit (%%) an Adresse %address"
+//% address.defl=0x38 address.min=0 address.max=127
+//% weight=90
+
     export function humidity(address: number = DEFAULT_ADDR): number {
         initOnce(address)
 
